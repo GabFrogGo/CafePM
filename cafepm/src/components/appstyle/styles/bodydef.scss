@@ -1,0 +1,38 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    overflow: hidden;
+    margin: 0;
+    background-repeat: no-repeat;
+    height: 100svh;
+    background: rgb(0,0,0);
+    background: 
+    linear-gradient(
+        180deg, 
+        rgba(0,0,0,1) 3%, 
+        rgba(56,10,162,1) 57%, 
+        rgba(45,14,126,1) 100%
+    );
+}
+
+textarea {
+    width: 100%;
+    resize: vertical;
+    background: none;
+    border: none;
+    outline: none;
+    color: white;
+    font-size: 16px;
+    font-family: 'Poppins', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+summary {
+    color: white;
+    cursor: pointer;
+}
+
+.element-txt {
+    font-family: 'Poppins', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}

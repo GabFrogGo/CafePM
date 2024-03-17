@@ -1,0 +1,16 @@
+@use './panel-styles/panelshared-st.scss';
+
+//Mandatory Style
+.panel-utilities {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.panel-container {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 100dvh;
+    overflow: auto;
+}

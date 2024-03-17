@@ -1,0 +1,40 @@
+{
+  "name": "cafepm",
+  "version": "0.1.0",
+  "private": true,
+  "main": "main/main.js",
+  "author": "GabFrogGo",
+  "license": "MIT",
+  "description": "Password Manager",
+  "scripts": {
+    "dev": "concurrently -n \"NEXT,ELECTRON\" -c \"yellow,blue\" --kill-others \"next dev\" \"electron .\"",
+    "build": "next build && electron-builder",
+    "start": "electron main/main.js",
+    "lint": "next lint",
+    "compile:sass": "sass src/**/*.scss public/css"
+  },
+  "dependencies": {
+    "axios": "^1.6.7",
+    "cheerio": "^1.0.0-rc.12",
+    "electron-serve": "^1.2.0",
+    "fs": "^0.0.1-security",
+    "next": "^14.1.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "autoprefixer": "^10.0.1",
+    "concurrently": "^8.2.2",
+    "electron": "^28.1.4",
+    "electron-builder": "^24.9.1",
+    "eslint": "^8",
+    "eslint-config-next": "14.1.0",
+    "postcss": "^8",
+    "sass": "^1.70.0",
+    "tailwindcss": "^3.3.0",
+    "typescript": "^5"
+  }
+}

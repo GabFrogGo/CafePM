@@ -1,0 +1,31 @@
+//Main Styles
+.main-info {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 4px;
+    cursor: pointer;
+}
+
+.panel-main {
+    font-size: 16px;
+    width: fit-content
+}
+
+.summ-style {
+    display: flex;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.info-icon svg {
+    margin: 6px;
+    vertical-align: middle;
+}
+
+.right-ued svg {
+    vertical-align: middle;
+    margin-left: 100px;
+    margin-right: 6px;
+    cursor: pointer;
+}

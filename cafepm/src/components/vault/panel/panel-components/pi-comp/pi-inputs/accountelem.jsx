@@ -12,7 +12,8 @@ function Input_Acc_Element() {
         <div className="deco-border-div">
             <span className="info-div-style">
                 <label htmlFor="entry-acc-name">Name</label>
-                <input name="name" 
+                <input 
+                    name="name" 
                     id="entry-acc-name" 
                     autocomplete="off" 
                     type="text" 
@@ -23,7 +24,8 @@ function Input_Acc_Element() {
         <div className="deco-border-div">
             <span className="info-div-style">
                 <label htmlFor="entry-acc-user">User</label>
-                <input name="user" 
+                <input 
+                    name="user" 
                     id="entry-acc-user" 
                     autocomplete="off" 
                     type="text" 
@@ -34,7 +36,8 @@ function Input_Acc_Element() {
         <div className="deco-border-div">
             <span className="info-div-style">
                 <label htmlFor="entry-acc-email">E-mail</label>
-                <input name="email" 
+                <input 
+                    name="email" 
                     id="entry-acc-email" 
                     autocomplete="off" 
                     type="text" 
@@ -45,7 +48,8 @@ function Input_Acc_Element() {
         <div className="deco-border-div">
             <span className="info-div-style">
                 <label htmlFor="entry-acc-pwd">Password</label>
-                <input name="password" 
+                <input 
+                    name="password" 
                     id="entry-acc-pwd" 
                     autocomplete="off" 
                     type="password" 
@@ -56,7 +60,8 @@ function Input_Acc_Element() {
         <div>
             <span className="info-div-style">
                 <label htmlFor="entry-acc-TOTP">Auth (TOTP)</label>
-                <input name="totp" 
+                <input 
+                    name="totp" 
                     id="entry-acc-TOTP" 
                     autocomplete="off" 
                     type="text" 

@@ -11,8 +11,9 @@ function Input_SNote_Element() {
                     name="name" 
                     id="entry-sn-name" 
                     defaultValue="" 
-                    autocomplete="off" 
-                    type="text">
+                    autoComplete="off" 
+                    type="text"
+                >
                 </input>
             </span>
         </div>

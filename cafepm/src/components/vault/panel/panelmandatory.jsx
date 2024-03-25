@@ -6,8 +6,8 @@ import PMain from './panel-set/panelmain.jsx';
 import PElements from './panel-set/panelements.jsx';
 import PInfo from './panel-set/panelinfo.jsx';
 import { ANEContextProvider } from '@/src/context/AddNewElementContext.jsx';
-import { CEContextProvider } from '@/src/context/CancelElementContext';
-import { SNEContextProvider } from '@/src/context/SaveNewElementContext';
+import { CEContextProvider } from '@/src/context/CancelElementContext.jsx';
+import { SNEContextProvider } from '@/src/context/SaveNewElementContext.jsx';
 //<ANEContextProvider>
 //</ANEContextProvider>
 function PMandatory() {
@@ -20,8 +20,15 @@ function PMandatory() {
         <PMain></PMain>
 
         <ANEContextProvider>
+
           <PElements></PElements>
-          <PInfo></PInfo>
+
+          <SNEContextProvider>
+
+            <PInfo></PInfo>
+
+          </SNEContextProvider>
+
         </ANEContextProvider>
 
       </div>

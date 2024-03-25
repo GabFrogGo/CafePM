@@ -8,8 +8,9 @@ function Input_ID_Element() {
                     name="name" 
                     id="entry-id-name" 
                     defaultValue="" 
-                    autocomplete="off" 
-                    type="text">
+                    autoComplete="off" 
+                    type="text"
+                >
                 </input>
             </span>
         </div>
@@ -20,7 +21,8 @@ function Input_ID_Element() {
                     name="title" 
                     id="entry-id-tl" 
                     defaultValue="" 
-                    className="info-div-style-et">
+                    className="info-div-style-et"
+                >
                     <option value="">-- Select --</option>
                     <option value="Mr">Mr</option>
                     <option value="Mrs">Mrs</option>
@@ -39,8 +41,9 @@ function Input_ID_Element() {
                     name="firstname" 
                     id="entry-id-fname" 
                     defaultValue="" 
-                    autocomplete="off" 
-                    type="text">
+                    autoComplete="off" 
+                    type="text"
+                >
                 </input>
             </span>
         </div>
@@ -51,8 +54,9 @@ function Input_ID_Element() {
                     name="secondname" 
                     id="entry-id-scname" 
                     defaultValue="" 
-                    autocomplete="off" 
-                    type="text">
+                    autoComplete="off" 
+                    type="text"
+                >
                 </input>
             </span>
         </div>
@@ -63,8 +67,9 @@ function Input_ID_Element() {
                     name="surname" 
                     id="entry-id-suname" 
                     defaultValue="" 
-                    autocomplete="off" 
-                    type="text">
+                    autoComplete="off" 
+                    type="text"
+                >
                 </input>
             </span>
         </div>
@@ -75,8 +80,9 @@ function Input_ID_Element() {
                     name="company" 
                     id="entry-id-cmp" 
                     defaultValue="" 
-                    autocomplete="off" 
-                    type="text">
+                    autoComplete="off" 
+                    type="text"
+                >
                 </input>
             </span>
         </div>
@@ -87,8 +93,9 @@ function Input_ID_Element() {
                     name="ssn" 
                     id="entry-id-ssn" 
                     defaultValue="" 
-                    autocomplete="off" 
-                    type="text">
+                    autoComplete="off" 
+                    type="text"
+                >
                 </input>
             </span>
         </div>
@@ -99,8 +106,9 @@ function Input_ID_Element() {
                     name="passportnum" 
                     id="entry-id-psn" 
                     defaultValue="" 
-                    autocomplete="off" 
-                    type="text">
+                    autoComplete="off" 
+                    type="text"
+                >
                 </input>
             </span>
         </div>
@@ -111,8 +119,9 @@ function Input_ID_Element() {
                     name="licensenum" 
                     id="entry-id-linum" 
                     defaultValue="" 
-                    autocomplete="off" 
-                    type="text">
+                    autoComplete="off" 
+                    type="text"
+                >
                 </input>
             </span>
         </div>
@@ -123,8 +132,9 @@ function Input_ID_Element() {
                     name="email" 
                     id="entry-id-email" 
                     defaultValue="" 
-                    autocomplete="off" 
-                    type="text">
+                    autoComplete="off" 
+                    type="text"
+                >
                 </input>
             </span>
         </div>
@@ -135,8 +145,9 @@ function Input_ID_Element() {
                     name="phone" 
                     id="entry-id-ph" 
                     defaultValue="" 
-                    autocomplete="off" 
-                    type="text">
+                    autoComplete="off" 
+                    type="text"
+                >
                 </input>
             </span>
         </div>
@@ -147,8 +158,9 @@ function Input_ID_Element() {
                     name="addr1" 
                     id="entry-id-adr1" 
                     defaultValue="" 
-                    autocomplete="off" 
-                    type="text">
+                    autoComplete="off" 
+                    type="text"
+                >
                 </input>
             </span>
         </div>
@@ -159,8 +171,9 @@ function Input_ID_Element() {
                     name="addr2" 
                     id="entry-id-adr2" 
                     defaultValue="" 
-                    autocomplete="off" 
-                    type="text">
+                    autoComplete="off" 
+                    type="text"
+                >
                 </input>
             </span>
         </div>
@@ -171,8 +184,9 @@ function Input_ID_Element() {
                     name="addr3" 
                     id="entry-id-adr3" 
                     defaultValue="" 
-                    autocomplete="off" 
-                    type="text">
+                    autoComplete="off" 
+                    type="text"
+                >
                 </input>
             </span>
         </div>
@@ -183,8 +197,9 @@ function Input_ID_Element() {
                     name="locCT" 
                     id="entry-id-ct" 
                     defaultValue="" 
-                    autocomplete="off" 
-                    type="text">
+                    autoComplete="off" 
+                    type="text"
+                >
                 </input>
             </span>
         </div>
@@ -195,8 +210,9 @@ function Input_ID_Element() {
                     name="locSP" 
                     id="entry-id-st" 
                     defaultValue="" 
-                    autocomplete="off" 
-                    type="text">
+                    autoComplete="off" 
+                    type="text"
+                >
                 </input>
             </span>
         </div>
@@ -207,8 +223,9 @@ function Input_ID_Element() {
                     name="locCode" 
                     id="entry-id-pzc" 
                     defaultValue="" 
-                    autocomplete="off" 
-                    type="text">
+                    autoComplete="off" 
+                    type="text"
+                >
                 </input>
             </span>
         </div>
@@ -219,8 +236,9 @@ function Input_ID_Element() {
                     name="country" 
                     id="entry-id-ctr" 
                     defaultValue="" 
-                    autocomplete="off" 
-                    type="text">
+                    autoComplete="off" 
+                    type="text"
+                >
                 </input>
             </span>
         </div>

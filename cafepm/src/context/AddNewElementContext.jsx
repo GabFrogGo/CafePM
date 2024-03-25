@@ -7,12 +7,12 @@ const ANEContext = createContext({}); //("") (null) (false) ({})
 export const ANEContextProvider = ({ children }) => {
     
     const [showinfo, setShowinfo] = useState(false);
-    //const [infoSetted, setInfoSetted] = useState(false);
+    const [infoSetted, setInfoSetted] = useState(false);
 
     const callinfo = () => {
         if(!infoSetted) {
             setShowinfo(true);
-            //setInfoSetted(true);
+            setInfoSetted(true);
         }
     };
 

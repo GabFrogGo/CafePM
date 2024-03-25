@@ -3,7 +3,11 @@ function Gen_Notes_Input() {
       <>
         <div className="deco-panel-info" id="notes">
           <label htmlFor="notes">Notes</label>
-          <textarea name="notes" rows="4" id="do-note"></textarea>
+          <textarea 
+            name="notes" 
+            rows="4" 
+            id="do-note"
+          ></textarea>
         </div>
       </>
     );

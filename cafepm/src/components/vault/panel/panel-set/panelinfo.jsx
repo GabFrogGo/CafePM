@@ -8,12 +8,12 @@ import { PInfoInput, PInfoPrevious, PInfoTest } from './info-panels/dynamic-pane
 
 function PInfo() {
 
-    //const { showinfo: showInfoANE } = useANEContext();
+    const { showinfo: showInfoANE } = useANEContext();
     //const { showinfo: showInfoCE } = useCEContext();
    
     return (
         <>
-            <PInfoInput />
+            {showInfoANE ? <PInfoInput /> : <PInfoPrevious />}
         </>
     );
 };

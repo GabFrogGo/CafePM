@@ -6,6 +6,8 @@ import PEFooter from '../panel-components/footers/pe-footer.jsx';
 //Function
 import Image from 'next/image';
 
+import imgtest from '@/public/images/testimg.png'
+
 function PElements() {
     return (
         <>
@@ -16,7 +18,7 @@ function PElements() {
                         <div class="element-prev">
                             <div class="left-cont">
                                 <div class="image-standards element-img">
-                                    <Image id="element-dist" src="" width={100} height={100}></Image>
+                                    <Image id="element-dist" src={imgtest} width={100} height={100}></Image>
                                 </div>
                             </div>
                             <div class="right-cont">

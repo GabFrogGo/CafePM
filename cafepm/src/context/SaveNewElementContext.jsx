@@ -2,24 +2,17 @@
 
 import React, { createContext, useState, useContext } from 'react';
 
-import saveForm from '../components/vault/panel/panel-components/pi-comp/input-scripts/to-json-acc.js';
+// import saveForm from '../components/vault/panel/panel-components/pi-comp/input-scripts/to-json-acc.js';
 
 const SNEContext = createContext({}); //("") (null) (false) ({})
 
 export const SNEContextProvider = ({ children }) => {
     
-    const [formData, setFormData] = useState(false);
+    const [saveFormData, setSaveFormData] = useState(false);
 
-    // const name = formData.name;
-    // const username = formData.username;
-    // const email = formData.email;
-    // const password = formData.password;
-    // const totp = formData.totp;
-
-    // //Otros
-    // const notes = formData.notes;
-    // const favourite = formData.favourite;
-    // const askpass = formData.askpass;
+    const doNewElement = () => {
+        setSaveFormData(true)
+    }
 
     // const newElement = {
     //     creationDate: getCrDate(),
@@ -52,9 +45,9 @@ export const SNEContextProvider = ({ children }) => {
 
     return (
         <>
-            {/* <SNEContext.Provider value={{ setFormData, handleFormSubmit, formData }}>
+            <SNEContext.Provider value={{ setSaveFormData, doNewElement, saveFormData }}>
                 { children }
-            </SNEContext.Provider> */}
+            </SNEContext.Provider>
 
         </>
     );

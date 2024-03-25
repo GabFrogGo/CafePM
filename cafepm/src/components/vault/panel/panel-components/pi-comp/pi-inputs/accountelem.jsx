@@ -1,12 +1,6 @@
 'use client';
 
-//import { useSNEContext } from "@/src/context/SaveNewElementContext";
-import { useRef, useState } from "react";
-
 function Input_Acc_Element() {
-    
-    //const { formData, setFormData } = useSNEContext();
-
     return (
       <>
         <div className="deco-border-div">
@@ -15,7 +9,7 @@ function Input_Acc_Element() {
                 <input 
                     name="name" 
                     id="entry-acc-name" 
-                    autocomplete="off" 
+                    autoComplete="off" 
                     type="text" 
                     defaultValue="">
                 </input>
@@ -27,7 +21,7 @@ function Input_Acc_Element() {
                 <input 
                     name="user" 
                     id="entry-acc-user" 
-                    autocomplete="off" 
+                    autoComplete="off"
                     type="text" 
                     defaultValue="">
                 </input>
@@ -39,7 +33,7 @@ function Input_Acc_Element() {
                 <input 
                     name="email" 
                     id="entry-acc-email" 
-                    autocomplete="off" 
+                    autoComplete="off" 
                     type="text" 
                     defaultValue="">
                 </input>
@@ -51,7 +45,7 @@ function Input_Acc_Element() {
                 <input 
                     name="password" 
                     id="entry-acc-pwd" 
-                    autocomplete="off" 
+                    autoComplete="off" 
                     type="password" 
                     defaultValue="">
                 </input>
@@ -63,7 +57,7 @@ function Input_Acc_Element() {
                 <input 
                     name="totp" 
                     id="entry-acc-TOTP" 
-                    autocomplete="off" 
+                    autoComplete="off" 
                     type="text" 
                     defaultValue="">
                 </input>

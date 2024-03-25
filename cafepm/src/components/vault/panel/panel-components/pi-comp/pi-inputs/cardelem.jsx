@@ -8,8 +8,9 @@ function Input_Card_Element() {
                     name="name" 
                     id="entry-card-name" 
                     defaultValue="" 
-                    autocomplete="off" 
-                    type="text">
+                    autoComplete="off" 
+                    type="text"
+                >
                 </input>
             </span>
         </div>
@@ -20,8 +21,9 @@ function Input_Card_Element() {
                     name="cardowner" 
                     id="entry-card-owner" 
                     defaultValue="" 
-                    autocomplete="off" 
-                    type="text">
+                    autoComplete="off" 
+                    type="text"
+                >
                 </input>
             </span>
         </div>
@@ -32,8 +34,9 @@ function Input_Card_Element() {
                     name="number" 
                     id="entry-card-num" 
                     defaultValue="" 
-                    autocomplete="off" 
-                    type="password">
+                    autoComplete="off" 
+                    type="password"
+                >
                 </input>
             </span>
         </div>
@@ -44,7 +47,8 @@ function Input_Card_Element() {
                     name="cardtm" 
                     id="entry-card-tm" 
                     defaultValue="" 
-                    className="info-div-style-et">
+                    className="info-div-style-et"
+                >
                     <option value="">-- Select --</option>
                     <option value="Visa">Visa</option>
                     <option value="Mastercard">Mastercard</option>
@@ -66,7 +70,8 @@ function Input_Card_Element() {
                     name="expmonth" 
                     id="entry-card-em" 
                     defaultValue="" 
-                    className="info-div-style-et">
+                    className="info-div-style-et"
+                >
                     <option value="">-- Select --</option>
                     <option value="01">01 - January</option>
                     <option value="02">02 - February</option>
@@ -90,9 +95,10 @@ function Input_Card_Element() {
                     name="expyear" 
                     id="entry-card-ey" 
                     defaultValue="" 
-                    autocomplete="off" 
+                    autoComplete="off" 
                     type="number" 
-                    placeholder="ej. 2024">
+                    placeholder="ej. 2024"
+                >
                 </input>
             </span>
         </div>
@@ -103,8 +109,9 @@ function Input_Card_Element() {
                     name="seccode" 
                     id="entry-card-sc" 
                     defaultValue="" 
-                    autocomplete="off" 
-                    type="password">
+                    autoComplete="off" 
+                    type="password"
+                >
                 </input>
             </span>
         </div>

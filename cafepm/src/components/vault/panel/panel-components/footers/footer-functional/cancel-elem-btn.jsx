@@ -1,15 +1,15 @@
 'use client';
 
 //Function
-import { useCEContext } from '@/src/context/CancelElementContext.jsx';
+import { useACContext } from '@/src/context/AddCancelElementContext.jsx';
 
 function Cancel_Elem_Btn() {
 
-    const { callCancelInfo } = useCEContext();
+    const { cancelinfo } = useACContext();
 
     return (
         <>
-            <div class="standard-svg-container" id="abort-element" onClick={ callCancelInfo }>
+            <div class="standard-svg-container" id="abort-element" onClick={ cancelinfo }>
                 <div class="display-centered-svg">
                     Cancel
                 </div>

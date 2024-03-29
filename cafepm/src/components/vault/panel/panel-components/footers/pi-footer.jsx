@@ -1,6 +1,5 @@
 import '../footer-styles/footerinfo-st.scss';
 //Function
-import Image from 'next/image';
 import SaveNewElement from '../footers/footer-functional/save-new-element';
 import Cancel_Elem_Btn from '../footers/footer-functional/cancel-elem-btn';
 

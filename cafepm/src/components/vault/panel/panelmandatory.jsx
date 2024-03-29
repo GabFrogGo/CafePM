@@ -5,11 +5,9 @@ import VaultUtilBar from '../utilbar/utilitiesbar.jsx';
 import PMain from './panel-set/panelmain.jsx';
 import PElements from './panel-set/panelements.jsx';
 import PInfo from './panel-set/panelinfo.jsx';
-import { ANEContextProvider } from '@/src/context/AddNewElementContext.jsx';
-import { CEContextProvider } from '@/src/context/CancelElementContext.jsx';
+import { ACContextProvider } from '@/src/context/AddCancelElementContext.jsx';
 import { SNEContextProvider } from '@/src/context/SaveNewElementContext.jsx';
-//<ANEContextProvider>
-//</ANEContextProvider>
+
 function PMandatory() {
   return (
     <>
@@ -19,7 +17,7 @@ function PMandatory() {
       <div class='panel-container'>
         <PMain></PMain>
 
-        <ANEContextProvider>
+        <ACContextProvider>
 
           <PElements></PElements>
 
@@ -29,7 +27,7 @@ function PMandatory() {
 
           </SNEContextProvider>
 
-        </ANEContextProvider>
+        </ACContextProvider>
 
       </div>
     </>

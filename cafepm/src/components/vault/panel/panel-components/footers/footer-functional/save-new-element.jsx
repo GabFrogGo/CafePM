@@ -7,7 +7,6 @@ import { useSNEContext } from '@/src/context/SaveNewElementContext.jsx';
 
 function SaveNewElement() {
 
-    // const { doFormSaving } = useSNEContext();
     const { doNewElement } = useSNEContext();
 
     return (

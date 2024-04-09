@@ -1,5 +1,6 @@
 'use client';
 import React, { useRef, useState } from 'react';
+import fs from 'fs';
 //Functions
 
 import { getCrDate, getID } from '@/src/components/functions/getAIProperties.jsx'
@@ -23,7 +24,7 @@ function ActionInput() {
 
     const form = useRef(null);
     
-    const { setSaveFormData } = useSNEContext();
+    const { saveFormData } = useSNEContext();
 
     const DynamicSelChange = (event) => {
         const PrevSelect = event.target.value;
@@ -75,15 +76,111 @@ function ActionInput() {
         }
     }
 
+
+    // const handleSubmit = (e) => {
+    //     e.preventDefault()
+    //     setError('')
+
+    //     const data = new FormData(form.current)
+    //     letForms(data)
+    //     console.log(getID())
+    //     console.log(getCrDate())
+    //     console.log([...data.entries()])
+    // }
+
+    const newJSONProps = (data) => {
+        let jsonProps = {};
+        switch (SelectedInput) {
+            case 'Input_Acc_Element':
+                jsonProps = {
+                    login: {
+                        uris: [],
+                        username: data.user,
+                        email: data.email,
+                        password: data.password,
+                        totp: data.totp
+                    }
+                };
+                break;
+            case 'Input_Card_Element':
+                jsonProps = {
+                    card: {
+                        uris: [],
+                        owner: data.cardowner,
+                        cardnumber: data.number,
+                        cardbrand: data.cardtm,
+                        expirymonth: data.expmonth,
+                        expiryyear: data.expyear,
+                        securitycode: data.seccode
+                    }
+                };
+                break;
+            case 'Input_ID_Element':
+                jsonProps = {
+                    identity: {
+                        title: data.title,
+                        firstname: data.firstname,
+                        secondname: data.secondname,
+                        surname: data.surname,
+                        company: data.company,
+                        ssn: data.ssn,
+                        passportnumber: data.passportnum,
+                        licensenumber: data.licensenum,
+                        email: data.email,
+                        phone: data.phone,
+                        address1: data.addr1,
+                        address2: data.addr2,
+                        address3: data.addr3,
+                        citytown: data.locCT,
+                        stateprovince: data.locSP,
+                        zippostalcode: data.locCode,
+                        country: data.country
+                    }
+                };
+                break;
+            case 'Input_SNote_Element':
+                jsonProps = {
+                    safenote: {}
+                };
+                break;
+            default:
+                jsonProps = {
+                    login: {
+                        uris: [],
+                        username: data.user,
+                        email: data.email,
+                        password: data.password,
+                        totp: data.totp
+                    }
+                };
+                break;
+        }
+        return jsonProps;
+    }
+
     const handleSubmit = (e) => {
         e.preventDefault()
         setError('')
 
-        const data = new FormData(form.current)
+        const data = Object.fromEntries(new FormData(form.current).entries())
         letForms(data)
         console.log(getID())
         console.log(getCrDate())
-        console.log([...data.entries()])
+        console.log([...Object.entries(data)])
+
+        const newJSONElement = {
+            creationDate: getCrDate(),
+            id: getID(),
+            folderID: "",
+            type: SelectedInput,
+            reprompt: data.askPwd,
+            favourite: data.favourite,
+            name: data.name,
+            notes: data.notes,
+            ...newJSONProps(data)
+        };
+
+        console.log(saveFormData(newJSONElement))
     }
 
     const letForms = (data) => {
@@ -131,87 +228,133 @@ function ActionInput() {
         }
     }
 
-    const newJSONProps = () => {
-        let jsonProps = {};
-        switch (SelectedInput) {
-            case 'Input_Acc_Element':
-                jsonProps = {
-                    login: {
-                        uris: [],
-                        username: user,
-                        email: email,
-                        password: password,
-                        totp: totp
-                    }
-                };
-                break;
-            case 'Input_Card_Element':
-                jsonProps = {
-                    card: {
-                        uris: [],
-                        owner: cardowner,
-                        cardnumber: number,
-                        cardbrand: cardtm,
-                        expirymonth: expmonth,
-                        expiryyear: expyear,
-                        securitycode: seccode
-                    }
-                };
-                break;
-            case 'Input_ID_Element':
-                jsonProps = {
-                    identity: {
-                        title: title,
-                        firstname: firstname,
-                        secondname: secondname,
-                        surname: surname,
-                        company: company,
-                        ssn: ssn,
-                        passportnumber: passportnum,
-                        licensenumber: licensenum,
-                        email: email,
-                        phone: phone,
-                        address1: addr1,
-                        address2: addr2,
-                        address3: addr3,
-                        citytown: locCT,
-                        stateprovince: locSP,
-                        zippostalcode: locCode,
-                        country: country
-                    }
-                };
-                break;
-            case 'Input_SNote_Element':
-                jsonProps = {
-                    safenote: {}
-                };
-                break;
-            default:
-                jsonProps = {
-                    login: {
-                        uris: [],
-                        username: user,
-                        email: email,
-                        password: password,
-                        totp: totp
-                    }
-                };
-                break;
-        }
-        return jsonProps;
+    // const newJSONProps = () => {
+    //     let jsonProps = {};
+    //     switch (SelectedInput) {
+    //         case 'Input_Acc_Element':
+    //             jsonProps = {
+    //                 login: {
+    //                     uris: [],
+    //                     username: user,
+    //                     email: email,
+    //                     password: password,
+    //                     totp: totp
+    //                 }
+    //             };
+    //             break;
+    //         case 'Input_Card_Element':
+    //             jsonProps = {
+    //                 card: {
+    //                     uris: [],
+    //                     owner: cardowner,
+    //                     cardnumber: number,
+    //                     cardbrand: cardtm,
+    //                     expirymonth: expmonth,
+    //                     expiryyear: expyear,
+    //                     securitycode: seccode
+    //                 }
+    //             };
+    //             break;
+    //         case 'Input_ID_Element':
+    //             jsonProps = {
+    //                 identity: {
+    //                     title: title,
+    //                     firstname: firstname,
+    //                     secondname: secondname,
+    //                     surname: surname,
+    //                     company: company,
+    //                     ssn: ssn,
+    //                     passportnumber: passportnum,
+    //                     licensenumber: licensenum,
+    //                     email: email,
+    //                     phone: phone,
+    //                     address1: addr1,
+    //                     address2: addr2,
+    //                     address3: addr3,
+    //                     citytown: locCT,
+    //                     stateprovince: locSP,
+    //                     zippostalcode: locCode,
+    //                     country: country
+    //                 }
+    //             };
+    //             break;
+    //         case 'Input_SNote_Element':
+    //             jsonProps = {
+    //                 safenote: {}
+    //             };
+    //             break;
+    //         default:
+    //             jsonProps = {
+    //                 login: {
+    //                     uris: [],
+    //                     username: user,
+    //                     email: email,
+    //                     password: password,
+    //                     totp: totp
+    //                 }
+    //             };
+    //             break;
+    //     }
+    //     return jsonProps;
+    // }
+
+    // function saveForm(data) {
+    //     // Leer el contenido actual del archivo JSON (si existe)
+    //     let existentContent = [];
+    //     try {
+    //         existentContent = JSON.parse(fs.readFileSync('./uservault.json', 'utf8'));
+    //     } catch (err) {
+    //         console.error('Error al leer el archivo JSON:', err);
+    //         existentContent = null;
+    //     }
+    
+    //     if (existentContent === null) {
+    //         try {
+    //             existentContent = [data];
+    //         } catch (err) {
+    //             console.error('Error al tratar de crear una bóbeda.', err);
+    //         }
+    //     } else {
+    //         try {
+    //             existentContent.push(data);
+    //         } catch (err) {
+    //             console.error('No se pudo agregar el elemento a la lista.', err);
+    //         }
+    //     }
+    
+    //     // Convertir el contenido actualizado a una cadena JSON
+    //     const dataToJSON = JSON.stringify({ items: existentContent }, null, 2); // Formateo para una mejor legibilidad
+    
+    //     // Escribir los datos JSON actualizados en el archivo
+    //     fs.writeFile('./uservault.json', dataToJSON, 'utf-8', (err) => {
+    //         if (err) {
+    //             console.error('Error al guardar el archivo JSON:', err);
+    //             return;
+    //         }
+    //         console.log('El nuevo elemento ha sido agregado al archivo JSON.');
+    //     });
+    // }
+
+    // const newJSONElement = {
+    //     creationDate: getCrDate(),
+    //     id: getID(),
+    //     folderID: "",
+    //     type: type,
+    //     reprompt: askPwd,
+    //     favourite: favourite,
+    //     name: name,
+    //     notes: notes,
+    //     ...newJSONProps()
+    // };
+
+
+    if(saveFormData) {
+        handleSubmit()
     }
 
-    const newJSONElement = () => {
-        creationDate: getCrDate()
-        id: doRandomID()
-        folderID: ""
-        type: type
-        reprompt: askPwd
-        favourite: favourite
-        name: name
-        notes: notes
-        {newJSONProps()}
-    };
+    
+
+    // saveForm(newJSONElement);
 
     // if(setSaveFormData) {
     //     handleSubmit
@@ -241,7 +384,6 @@ function ActionInput() {
                     {renderInputComp()}
                 </div>
                 {renderWidgets()}
-                <button type='submit'> Prueba</button>
             </form>
         </>
     );

@@ -11,8 +11,8 @@ export function PInfoInput() {
 
     return (
         <>
-            <div class="panel-info">
-                <div class="info-box">
+            <div className="panel-info">
+                <div className="info-box">
                     <ActionInput></ActionInput>
                 </div>
                 <PIFooter></PIFooter>
@@ -21,30 +21,13 @@ export function PInfoInput() {
     );
 }
 
-export function PInfoTest() {
-
-    return (
-        <>
-            <div class="panel-info">
-                <div class="info-box">
-                    <div class="logopip-cont">
-                        Test
-                        <Image src={owl_logo} width={120} height={120}></Image>
-                    </div>
-                </div>
-            </div>
-        </>
-    );
-}
-
-
 export function PInfoPrevious() {
 
     return (
         <>
-            <div class="panel-info">
-                <div class="info-box">
-                    <div class="logopip-cont">
+            <div className="panel-info">
+                <div className="info-box">
+                    <div className="logopip-cont">
                         <Image src={owl_logo} width={220} height={220}></Image>
                     </div>
                 </div>

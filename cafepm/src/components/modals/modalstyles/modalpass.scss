@@ -1,0 +1,64 @@
+.modal-passkeeper-container {
+    display: flex;
+    flex-direction: row;
+    border: 2px solid;
+    border-radius: 4px;
+    justify-content: space-between;
+    padding: 6px;
+    margin-bottom: 10px;
+
+    div {
+        margin-left: 3px;
+        margin-right: 3px;
+        top: 50%;
+    }
+}
+.passarea {
+    overflow-x: hidden;
+    overflow-y: visible;
+    overflow-wrap: break-word;
+}
+.passbuttons {
+    display: flex;
+    flex-direction: row;
+
+    span {
+        cursor: pointer;
+    }
+}
+
+.modal-settings-box {
+    background: rgba(75, 75, 75, 0.650);
+    border-radius: 4px;
+    padding: 6px;
+    display: flex;
+    flex-direction: column;
+    
+
+    label {
+        font-size: 12px;
+        margin-bottom: 4px;
+    }
+
+    input {
+        height: 18px;
+        font-size: 14px;
+        margin-bottom: 8px;
+        color: white;
+        font-family: 'Poppins', 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        border: none;
+        background: none;
+        outline: none;
+        
+    }
+}
+.setting-tab {
+    display: flex;
+    flex-direction: row;
+    vertical-align: middle;
+    justify-content: space-between;
+
+    span {
+        font-size: 12px;
+    }
+}

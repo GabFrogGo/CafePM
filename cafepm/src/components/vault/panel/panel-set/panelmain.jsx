@@ -9,8 +9,8 @@ import PMFooter from '../panel-components/footers/pm-footer.jsx';
 function PMain() {
     return (
         <>
-            <div class="panel-main">
-                <div class="main-box">
+            <div className="panel-main">
+                <div className="main-box">
                     <div id="main-info-contents">
                         <Elemental_Dirs></Elemental_Dirs>
                         <Element_Types></Element_Types>

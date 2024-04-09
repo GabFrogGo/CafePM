@@ -5,7 +5,7 @@ import Add_Elem_Btn from '../footers/footer-functional/add-elem-button.jsx';
 function PEFooter() {
     return (
         <>
-            <div class="footer-panel-gen">
+            <div className="footer-panel-gen">
                 <Add_Elem_Btn />
             </div>
         </>

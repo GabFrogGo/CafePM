@@ -1,6 +1,10 @@
 import '../components/appstyle/styles/bodydef.scss';
 import GlobalButtons from '../components/buttons/globalbuttons.jsx';
 
+export const metadata = {
+  title: 'CafePM | Home',
+}
+
 export default function Base_Page_CPM() {
   return (
     <div>
@@ -13,7 +17,7 @@ export default function Base_Page_CPM() {
 
 function Header_Page_CPM() {
   return (
-    <div class="header">
+    <div className="header">
       <section>
         <a>About</a>
         <a>Help</a>
@@ -24,7 +28,7 @@ function Header_Page_CPM() {
 
 function Body_Page_CPM() {
   return (
-    <div class="body">
+    <div className="body">
       <img></img>
     </div>
   );

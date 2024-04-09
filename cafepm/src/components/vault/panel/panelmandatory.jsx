@@ -7,29 +7,42 @@ import PElements from './panel-set/panelements.jsx';
 import PInfo from './panel-set/panelinfo.jsx';
 import { ACContextProvider } from '@/src/context/AddCancelElementContext.jsx';
 import { SNEContextProvider } from '@/src/context/SaveNewElementContext.jsx';
+import { PopContextProvider } from '@/src/context/InvokePopupsContext.jsx';
+//Popups
+import { ModalFP, ModalGPP } from '@/src/components/modals/modalcomp/dynamic-modals.jsx'
 
 function PMandatory() {
+
   return (
     <>
-      <div class='panel-utilities'>
-        <VaultUtilBar></VaultUtilBar>
-      </div>
-      <div class='panel-container'>
-        <PMain></PMain>
+      <PopContextProvider>
+        <ModalFP/>
+        
+        <div className='panel-utilities'>
 
-        <ACContextProvider>
+          <VaultUtilBar></VaultUtilBar>
 
-          <PElements></PElements>
+        </div>
 
-          <SNEContextProvider>
+        <div className='panel-container'>
+          
+          <PMain></PMain>
 
-            <PInfo></PInfo>
+          <ACContextProvider>
 
-          </SNEContextProvider>
+            <PElements></PElements>
 
-        </ACContextProvider>
+            <SNEContextProvider>
 
-      </div>
+              <PInfo></PInfo>
+
+            </SNEContextProvider>
+
+          </ACContextProvider>
+
+        </div>
+
+      </PopContextProvider>
     </>
   );
 }

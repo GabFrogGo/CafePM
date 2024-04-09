@@ -11,24 +11,24 @@ import imgtest from '@/public/images/testimg.png'
 function PElements() {
     return (
         <>
-            <div class="panel-elements">
-                <div class="elements-box">
-                    <div class="elements">
+            <div className="panel-elements">
+                <div className="elements-box">
+                    <div className="elements">
 
-                        <div class="element-prev">
-                            <div class="left-cont">
-                                <div class="image-standards element-img">
+                        <div className="element-prev">
+                            <div className="left-cont">
+                                <div className="image-standards element-img">
                                     <Image id="element-dist" src={imgtest} width={100} height={100}></Image>
                                 </div>
                             </div>
-                            <div class="right-cont">
+                            <div className="right-cont">
                                 <div>
-                                    <span class="element-name">
+                                    <span className="element-name">
                                         Netflix
                                     </span>
                                 </div>
                                 <div>
-                                    <span class="element-user">
+                                    <span className="element-user">
                                         serpiente@lol.com
                                     </span>
                                 </div>

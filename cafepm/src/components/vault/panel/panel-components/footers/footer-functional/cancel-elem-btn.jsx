@@ -9,8 +9,8 @@ function Cancel_Elem_Btn() {
 
     return (
         <>
-            <div class="standard-svg-container" id="abort-element" onClick={ cancelinfo }>
-                <div class="display-centered-svg">
+            <div className="standard-svg-container" id="abort-element" onClick={ cancelinfo }>
+                <div className="display-centered-svg">
                     Cancel
                 </div>
             </div>

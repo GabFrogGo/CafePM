@@ -1,10 +1,18 @@
 @use './panel-styles/panelshared-st.scss';
 
 //Mandatory Style
+.popups-lib {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+}
+
 .panel-utilities {
     display: flex;
     flex-direction: row;
     width: 100%;
+    z-index: 0;
 }
 
 .panel-container {
@@ -13,4 +21,5 @@
     width: 100%;
     height: 100dvh;
     overflow: auto;
+    z-index: 0;
 }

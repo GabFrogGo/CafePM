@@ -12,7 +12,7 @@ function Add_Elem_Btn() {
     return (
         <>
             <div id="box-add-elem" onClick={ makeinfo }>
-                <div class="display-centered-svg">
+                <div className="display-centered-svg">
                     <Image src={svgadd} width={24} height={24}></Image>
                 </div>
             </div>
@@ -31,7 +31,7 @@ const { callinfo } = useContext(PanelInfoContext);
             <div id="box-add-elem" onClick={() => {
                 callinfo();
             }}>
-                <div class="display-centered-svg">
+                <div className="display-centered-svg">
                     <Image src={svgadd} width={24} height={24}></Image>
                 </div>
             </div>

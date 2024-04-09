@@ -6,6 +6,7 @@ import Script from 'next/script';
 import Image from 'next/image';
 
 function UtilBar_User_pfp() {
+
     return (
         <>
             <div class="image-standards pfp-content" id="user-pfp">
@@ -15,7 +16,7 @@ function UtilBar_User_pfp() {
                 </label>
             </div>
             
-            <Script src='./pfpfunct.js'/>
+            {/* <Script src='./pfpfunct.js'/> */}
         </>
     );
 }

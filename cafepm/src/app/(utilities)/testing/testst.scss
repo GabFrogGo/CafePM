@@ -2,14 +2,10 @@ body {
     background-color: goldenrod;
 }
 
-.boxz1 {
-    position: absolute;
-    width: 100px;
-    height: 100px;
-    background-color: aqua;
-}
-
-.contll {
-    position: relative;
-    z-index: 1;
+.accion {
+    background-color: crimson;
+    width: fit-content;
+    height: auto;
+    margin-top: 10px;
+    cursor: pointer;
 }

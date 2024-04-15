@@ -1,11 +1,8 @@
-//Components
-import './testst.scss'
+'use client'
 
-export const metadata = {
-    title: 'CafePM | Entorno de Prueba',
-}
+import React, { useState } from 'react'
 
-export default function EPrueba() {
+export default function ClBtn() {
     const [hacerAccion, setHacerAccion] = useState(false);
 
     const handleAccion = () => {
@@ -15,11 +12,7 @@ export default function EPrueba() {
     return (
         <>
             <div>
-                <div className='boxz1'>
-                    <span>HolaSoyGerman</span>
-                </div>
                 <div>
-                    <input name='folders-inp' type='text' />
                     <div className='accion' onClick={handleAccion}>Crea una carpeta</div>
                 </div>
             </div>

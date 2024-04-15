@@ -2,51 +2,41 @@
 
 import React, { createContext, useState, useContext } from 'react';
 
-const PopContext = createContext({}); //("") (null) (false) ({})
+const PopupContext = createContext();
 
-export const PopContextProvider = ({ children }) => {
+export const PopupContextProvider = ({ children }) => {
     
     const [showIPFPWidget, setShowIPFPWidget] = useState(false);
+    const [showIPGPPWidget, setShowIPGPPWidget] = useState(false);
 
     const makingfolder = () => {
         console.log("Llamar widget")
-        setShowIPFPWidget(true);
+        setShowIPFPWidget(true)
     };
 
     const cancelfolder = () => {
         console.log("Cancelar widget")
-        setShowIPFPWidget(false);
+        setShowIPFPWidget(false)
     };
-
-    const [showIPGPPWidget, setShowIPGPPWidget] = useState(false);
 
     const callpasswidget = () => {
         console.log("Llamar widget")
-        setShowIPGPPWidget(true);
+        setShowIPGPPWidget(true)
     };
 
     const cancelpasswidget = () => {
         console.log("Cancelar widget")
-        setShowIPGPPWidget(false);
+        setShowIPGPPWidget(false)
     };
 
     return (
         <>
-            <PopContext.Provider value={{ 
-                setShowIPFPWidget, 
-                makingfolder, 
-                cancelfolder, 
-                showIPFPWidget,
-                setShowIPGPPWidget,
-                callpasswidget, 
-                cancelpasswidget,
-                showIPGPPWidget }}
-            >
+            <PopupContext.Provider value={{ setShowIPFPWidget, makingfolder, cancelfolder, showIPFPWidget, setShowIPGPPWidget, callpasswidget, cancelpasswidget, showIPGPPWidget }}>
                 { children }
-            </PopContext.Provider>
+            </PopupContext.Provider>
 
         </>
     );
 };
 
-export const usePopContext = () => useContext(PopContext);
+export const usePopupContext = () => useContext(PopupContext);

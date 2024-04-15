@@ -1,11 +1,16 @@
-'use client'
-import { useState, useEffect } from "react"
-import '@/src/components/modals/modalstyles/basemodal.scss'
+'use client';
+
+import '@/src/components/modals/modalstyles/basemodal.scss';
+
+import { usePopupContext } from '@/src/context/InvokePopupsContext.jsx';
 
 //Buttons
-import { SaveBTN, CancelBTN } from "../../buttons/shared/modalbuttons.jsx"
+import { SaveBTN, CancelBTN } from "../../buttons/shared/modalbuttons.jsx";
 
 export default function FolderPopup() {
+
+    const { cancelfolder } = usePopupContext();
+
     return (
         <>
             <div className="np-container">
@@ -30,7 +35,9 @@ export default function FolderPopup() {
 
                 <div className="np-buttons-box">
                     <SaveBTN />
-                    <CancelBTN />
+                    <span onClick={ cancelfolder }>
+                        <CancelBTN />
+                    </span>
                 </div>
             </div>
         </>

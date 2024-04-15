@@ -7,6 +7,7 @@ import CopyPass from '@/public/ups/native/copy.svg';
 import RLPass from '@/public/ups/native/refresh-dot.svg';
 import '@/src/components/modals/modalstyles/basemodal.scss';
 import '@/src/components/modals/modalstyles/modalpass.scss';
+import { usePopupContext } from "@/src/context/InvokePopupsContext.jsx";
 
 export default function GenPassPopup() {
     const [value, setValue] = useState({
@@ -58,6 +59,8 @@ export default function GenPassPopup() {
         const newPass = doPass(passLongitude);
         setGeneratedPassword(newPass);
     };
+
+    const { cancelpasswidget } = usePopupContext();
 
     return (
         <>
@@ -141,7 +144,9 @@ export default function GenPassPopup() {
                 </div>
 
                 <div className="np-buttons-box">
-                    <CancelBTN />
+                    <span onClick={ cancelpasswidget }>
+                        <CancelBTN />
+                    </span>
                 </div>
             </div>
         </>

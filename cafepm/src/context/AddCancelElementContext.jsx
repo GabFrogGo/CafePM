@@ -2,7 +2,7 @@
 
 import React, { createContext, useState, useContext } from 'react';
 
-const ACContext = createContext({}); //("") (null) (false) ({})
+const ACContext = createContext(); //("") (null) (false) ({})
 
 export const ACContextProvider = ({ children }) => {
     

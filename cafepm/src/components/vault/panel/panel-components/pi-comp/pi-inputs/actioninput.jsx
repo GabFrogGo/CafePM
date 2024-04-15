@@ -1,6 +1,7 @@
 'use client';
+
 import React, { useRef, useState } from 'react';
-import fs from 'fs';
+import { promises as fs } from 'fs';
 //Functions
 
 import { getCrDate, getID } from '@/src/components/functions/getAIProperties.jsx'
@@ -298,42 +299,42 @@ function ActionInput() {
     //     return jsonProps;
     // }
 
-    // function saveForm(data) {
-    //     // Leer el contenido actual del archivo JSON (si existe)
-    //     let existentContent = [];
-    //     try {
-    //         existentContent = JSON.parse(fs.readFileSync('./uservault.json', 'utf8'));
-    //     } catch (err) {
-    //         console.error('Error al leer el archivo JSON:', err);
-    //         existentContent = null;
-    //     }
+    function saveForm(data) {
+        // Leer el contenido actual del archivo JSON (si existe)
+        let existentContent = [];
+        try {
+            existentContent = JSON.parse(fs.readFileSync('./uservault.json', 'utf8'));
+        } catch (err) {
+            console.error('Error al leer el archivo JSON:', err);
+            existentContent = null;
+        }
     
-    //     if (existentContent === null) {
-    //         try {
-    //             existentContent = [data];
-    //         } catch (err) {
-    //             console.error('Error al tratar de crear una bóbeda.', err);
-    //         }
-    //     } else {
-    //         try {
-    //             existentContent.push(data);
-    //         } catch (err) {
-    //             console.error('No se pudo agregar el elemento a la lista.', err);
-    //         }
-    //     }
+        if (existentContent === null) {
+            try {
+                existentContent = [data];
+            } catch (err) {
+                console.error('Error al tratar de crear una bóbeda.', err);
+            }
+        } else {
+            try {
+                existentContent.push(data);
+            } catch (err) {
+                console.error('No se pudo agregar el elemento a la lista.', err);
+            }
+        }
     
-    //     // Convertir el contenido actualizado a una cadena JSON
-    //     const dataToJSON = JSON.stringify({ items: existentContent }, null, 2); // Formateo para una mejor legibilidad
+        // Convertir el contenido actualizado a una cadena JSON
+        const dataToJSON = JSON.stringify({ items: existentContent }, null, 2); // Formateo para una mejor legibilidad
     
-    //     // Escribir los datos JSON actualizados en el archivo
-    //     fs.writeFile('./uservault.json', dataToJSON, 'utf-8', (err) => {
-    //         if (err) {
-    //             console.error('Error al guardar el archivo JSON:', err);
-    //             return;
-    //         }
-    //         console.log('El nuevo elemento ha sido agregado al archivo JSON.');
-    //     });
-    // }
+        // Escribir los datos JSON actualizados en el archivo
+        fs.writeFile('./uservault.json', dataToJSON, 'utf-8', (err) => {
+            if (err) {
+                console.error('Error al guardar el archivo JSON:', err);
+                return;
+            }
+            console.log('El nuevo elemento ha sido agregado al archivo JSON.');
+        });
+    }
 
     // const newJSONElement = {
     //     creationDate: getCrDate(),
